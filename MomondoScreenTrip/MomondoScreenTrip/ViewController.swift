@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         
         navigationItem.title = "Malta"
         navigationItem.leftBarButtonItem = .init(image: .init(systemName: "chevron.left"), style: .plain, target: self, action: #selector(handleBack))
+        navigationItem.rightBarButtonItem = .init(image: .init(systemName: "ellipsis"), style: .plain, target: self, action: #selector(handleBack))
         navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
