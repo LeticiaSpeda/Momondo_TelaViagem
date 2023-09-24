@@ -2,6 +2,7 @@ import UIKit
 
 final class ViewController: UIViewController {
     
+    //MARK: - Properties
     private lazy var mainVStack: UIStackView = {
         let stack = UIStackView()
         stack.axis = .vertical
@@ -40,6 +41,7 @@ final class ViewController: UIViewController {
         return label
     }()
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.1174478158, green: 0.02265601605, blue: 0.2253929079, alpha: 1)
@@ -50,6 +52,7 @@ final class ViewController: UIViewController {
         print("Ok")
     }
     
+    //MARK: - Helpers
     private func commonInit() {
         configureHierarchy()
         configureConstraints()
