@@ -7,26 +7,22 @@ final class ViewController: UIViewController {
     
     private lazy var secondVStack = MainStackView(space: 15, direction: .vertical)
     
-    private lazy var lookingLowValuesLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Procurandos valores baixos..."
-        label.font = .boldSystemFont(ofSize: 16)
-        label.textColor = .white.withAlphaComponent(0.5)
-        return label
-    }()
+    private lazy var lookingLowValuesLabel = TextsMainUILabel(
+        textMain: "Procurandos valores baixos...",
+        styleFont: .boldSystemFont(ofSize: 20),
+        colorText: .white.withAlphaComponent(0.5)
+    )
+    
+    private lazy var destinationsLabel = TextsMainUILabel(
+        textMain: "Principais destinos",
+        styleFont: .boldSystemFont(ofSize: 14),
+        colorText: .white.withAlphaComponent(0.5)
+    )
     
     private lazy var viewLookingLow: UIView = {
         let view = UIView()
         view.backgroundColor = #colorLiteral(red: 0.2289779186, green: 0.09466151148, blue: 0.3955129981, alpha: 1)
         return view
-    }()
-    
-    private lazy var destinationsLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Principais destinos"
-        label.font = .boldSystemFont(ofSize: 14)
-        label.textColor = .white.withAlphaComponent(0.5)
-        return label
     }()
     
     //MARK: - LifeCycle

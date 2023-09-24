@@ -14,6 +14,7 @@
 		E0CFA5A72ABF8B620082585E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0CFA5A52ABF8B620082585E /* LaunchScreen.storyboard */; };
 		E0CFA5B22ABFB4F70082585E /* translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CFA5B12ABFB4F70082585E /* translate.swift */; };
 		E0CFA5B52ABFB5910082585E /* MainStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CFA5B42ABFB5910082585E /* MainStackView.swift */; };
+		E0CFA5B72ABFB9F00082585E /* TextsMainUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CFA5B62ABFB9F00082585E /* TextsMainUILabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E0CFA5A82ABF8B620082585E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0CFA5B12ABFB4F70082585E /* translate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = translate.swift; sourceTree = "<group>"; };
 		E0CFA5B42ABFB5910082585E /* MainStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStackView.swift; sourceTree = "<group>"; };
+		E0CFA5B62ABFB9F00082585E /* TextsMainUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextsMainUILabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				E0CFA5B42ABFB5910082585E /* MainStackView.swift */,
+				E0CFA5B62ABFB9F00082585E /* TextsMainUILabel.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CFA5B72ABFB9F00082585E /* TextsMainUILabel.swift in Sources */,
 				E0CFA5B52ABFB5910082585E /* MainStackView.swift in Sources */,
 				E0CFA5B22ABFB4F70082585E /* translate.swift in Sources */,
 				E0CFA59F2ABF8B600082585E /* ViewController.swift in Sources */,
