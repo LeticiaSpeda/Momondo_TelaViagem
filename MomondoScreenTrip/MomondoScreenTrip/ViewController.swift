@@ -3,21 +3,9 @@ import UIKit
 final class ViewController: UIViewController {
     
     //MARK: - Properties
-    private lazy var mainVStack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 15
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        return stack
-    }()
+    private lazy var mainVStack = MainStackView(space: 15, direction: .vertical)
     
-    private lazy var secondVStack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 15
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        return stack
-    }()
+    private lazy var secondVStack = MainStackView(space: 15, direction: .vertical)
     
     private lazy var lookingLowValuesLabel: UILabel = {
         let label = UILabel()

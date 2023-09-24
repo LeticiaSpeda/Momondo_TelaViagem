@@ -12,6 +12,8 @@
 		E0CFA59F2ABF8B600082585E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CFA59E2ABF8B600082585E /* ViewController.swift */; };
 		E0CFA5A42ABF8B620082585E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CFA5A32ABF8B620082585E /* Assets.xcassets */; };
 		E0CFA5A72ABF8B620082585E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0CFA5A52ABF8B620082585E /* LaunchScreen.storyboard */; };
+		E0CFA5B22ABFB4F70082585E /* translate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CFA5B12ABFB4F70082585E /* translate.swift */; };
+		E0CFA5B52ABFB5910082585E /* MainStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CFA5B42ABFB5910082585E /* MainStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E0CFA5A32ABF8B620082585E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0CFA5A62ABF8B620082585E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0CFA5A82ABF8B620082585E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0CFA5B12ABFB4F70082585E /* translate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = translate.swift; sourceTree = "<group>"; };
+		E0CFA5B42ABFB5910082585E /* MainStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				E0CFA59E2ABF8B600082585E /* ViewController.swift */,
+				E0CFA5B32ABFB5470082585E /* Commons */,
+				E0CFA5B02ABFB46B0082585E /* UIView+Estensions */,
 				E0CFA5A82ABF8B620082585E /* Info.plist */,
 				E0CFA5AE2ABF8B6E0082585E /* Aplication */,
 				E0CFA5AF2ABF8B8E0082585E /* Assets */,
@@ -78,6 +84,22 @@
 				E0CFA5A32ABF8B620082585E /* Assets.xcassets */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		E0CFA5B02ABFB46B0082585E /* UIView+Estensions */ = {
+			isa = PBXGroup;
+			children = (
+				E0CFA5B12ABFB4F70082585E /* translate.swift */,
+			);
+			path = "UIView+Estensions";
+			sourceTree = "<group>";
+		};
+		E0CFA5B32ABFB5470082585E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				E0CFA5B42ABFB5910082585E /* MainStackView.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CFA5B52ABFB5910082585E /* MainStackView.swift in Sources */,
+				E0CFA5B22ABFB4F70082585E /* translate.swift in Sources */,
 				E0CFA59F2ABF8B600082585E /* ViewController.swift in Sources */,
 				E0CFA59B2ABF8B600082585E /* AppDelegate.swift in Sources */,
 				E0CFA59D2ABF8B600082585E /* SceneDelegate.swift in Sources */,
