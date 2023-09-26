@@ -7,7 +7,7 @@ final class tripCollectionViewCell: UICollectionViewCell {
         let img = UIImage.maldivas
         let view = UIImageView(image: img)
         view.clipsToBounds = true
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = 6
         view.contentMode = .scaleAspectFill
         view.translate()
         return view
@@ -27,7 +27,7 @@ final class tripCollectionViewCell: UICollectionViewCell {
         label.backgroundColor = #colorLiteral(red: 0.2538110912, green: 0.5731842518, blue: 0.7796986103, alpha: 1)
         label.layer.cornerRadius = 5
         label.clipsToBounds = true
-        label.font = .boldSystemFont(ofSize: 16)
+        label.font = .boldSystemFont(ofSize: 14)
         label.translate()
         return label
     }()
@@ -93,6 +93,8 @@ final class tripCollectionViewCell: UICollectionViewCell {
                 equalTo: tripView.leadingAnchor,
                 constant: 10
             ),
+            mostPopularLabel.widthAnchor.constraint(equalToConstant: 96),
+            mostPopularLabel.heightAnchor.constraint(equalToConstant: 30),
             
             countryLabel.bottomAnchor.constraint(
                 equalTo: tripView.bottomAnchor,
