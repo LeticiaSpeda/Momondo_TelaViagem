@@ -25,6 +25,25 @@ final class ViewController: UIViewController {
         return view
     }()
     
+    private var tripCollectionView: UICollectionView {
+        let collection =  UICollectionView(
+            frame: CGRect.zero,
+            collectionViewLayout: UICollectionViewLayout.init()
+        )
+        collection.showsVerticalScrollIndicator = false
+        collection.delegate = self
+        collection.dataSource = self
+        collection.delaysContentTouches = false
+        
+        let layout = UICollectionViewFlowLayout.init()
+        layout.scrollDirection = .horizontal
+        collection.setCollectionViewLayout(layout, animated: true)
+        collection.register(tripCollectionViewCell.self, forCellWithReuseIdentifier: tripCollectionViewCell.identifier)
+        return collection
+    }
+    
+   
+    
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +71,7 @@ final class ViewController: UIViewController {
         
         viewLookingLow.addSubview(secondVStack)
         secondVStack.addArrangedSubview(destinationsLabel)
+        secondVStack.addArrangedSubview(tripCollectionView)
         secondVStack.addArrangedSubview(UIView())
     }
     
@@ -96,10 +116,7 @@ final class ViewController: UIViewController {
     }
     
     private func configureStyle() {
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = #colorLiteral(red: 0.1174478158, green: 0.02265601605, blue: 0.2253929079, alpha: 1)
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        
+        styleNavigationBar()
         navigationItem.title = "Malta"
         navigationItem.leftBarButtonItem = .init(
             image: .init(systemName: "chevron.left"),
@@ -113,9 +130,18 @@ final class ViewController: UIViewController {
             target: self,
             action: #selector(handleBack)
         )
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
+}
+
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
 }
