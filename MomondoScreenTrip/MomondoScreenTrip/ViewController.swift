@@ -37,12 +37,17 @@ final class ViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
+        layout.sectionInset = .init(
+            top: .zero,
+            left: .zero,
+            bottom: 50,
+            right: .zero
+        )
         collection.setCollectionViewLayout(layout, animated: true)
         collection.register(tripCollectionViewCell.self, forCellWithReuseIdentifier: tripCollectionViewCell.identifier)
+        collection.reloadData()
         return collection
     }
-    
-   
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -136,12 +141,19 @@ final class ViewController: UIViewController {
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        
+        return collectionView.dequeueReusableCell(withReuseIdentifier: tripCollectionViewCell.identifier, for: indexPath)
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: 200)
+    }
 }
