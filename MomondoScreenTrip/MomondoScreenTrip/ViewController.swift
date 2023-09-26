@@ -26,24 +26,16 @@ final class ViewController: UIViewController {
     }()
     
     private var tripCollectionView: UICollectionView {
-        let collection =  UICollectionView(
-            frame: CGRect.zero,
-            collectionViewLayout: UICollectionViewLayout.init()
-        )
+        let layout = UICollectionViewFlowLayout()
+        
+        let collection =  UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.showsVerticalScrollIndicator = false
         collection.delegate = self
         collection.dataSource = self
         collection.delaysContentTouches = false
+        collection.backgroundColor = #colorLiteral(red: 0.2289779186, green: 0.09466151148, blue: 0.3955129981, alpha: 1)
         
-        let layout = UICollectionViewFlowLayout.init()
         layout.scrollDirection = .horizontal
-        layout.sectionInset = .init(
-            top: .zero,
-            left: .zero,
-            bottom: 50,
-            right: .zero
-        )
-        collection.setCollectionViewLayout(layout, animated: true)
         collection.register(tripCollectionViewCell.self, forCellWithReuseIdentifier: tripCollectionViewCell.identifier)
         collection.reloadData()
         return collection
@@ -54,6 +46,7 @@ final class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.1174478158, green: 0.02265601605, blue: 0.2253929079, alpha: 1)
         commonInit()
+        tripCollectionView.reloadData()
     }
     
     @objc func handleBack() {
@@ -77,7 +70,7 @@ final class ViewController: UIViewController {
         viewLookingLow.addSubview(secondVStack)
         secondVStack.addArrangedSubview(destinationsLabel)
         secondVStack.addArrangedSubview(tripCollectionView)
-        secondVStack.addArrangedSubview(UIView())
+        
     }
     
     private func configureConstraints() {
@@ -138,8 +131,8 @@ final class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
+extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         1
     }
@@ -154,6 +147,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: collectionView.frame.width, height: 200)
+        collectionView.frame.size
     }
 }

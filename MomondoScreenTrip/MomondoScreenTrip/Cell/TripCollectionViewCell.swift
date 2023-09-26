@@ -8,7 +8,7 @@ final class tripCollectionViewCell: UICollectionViewCell {
         let view = UIImageView(image: img)
         view.clipsToBounds = true
         view.layer.cornerRadius = 10
-        view.contentMode = .scaleAspectFit
+        view.contentMode = .scaleAspectFill
         view.translate()
         return view
     }()
@@ -22,10 +22,11 @@ final class tripCollectionViewCell: UICollectionViewCell {
     
     private lazy var mostPopularLabel: UILabel = {
         let label = UILabel()
-        label.text = "Mais popular"
+        label.text = " Mais popular "
         label.textColor = .white
         label.backgroundColor = #colorLiteral(red: 0.2538110912, green: 0.5731842518, blue: 0.7796986103, alpha: 1)
-        label.layer.cornerRadius = 10
+        label.layer.cornerRadius = 5
+        label.clipsToBounds = true
         label.font = .boldSystemFont(ofSize: 16)
         label.translate()
         return label
@@ -82,6 +83,7 @@ final class tripCollectionViewCell: UICollectionViewCell {
             tripView.bottomAnchor.constraint(
                 equalTo: tripImage.bottomAnchor
             ),
+            
             
             mostPopularLabel.topAnchor.constraint(
                 equalTo: tripView.topAnchor,
